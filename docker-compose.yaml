@@ -3,11 +3,13 @@ version: "3.1"
 services:
     redis:
         image: redis:alpine
+        container_name: redis_l5.7
         networks:
             - app-network
 
     laravel-app:
         build: .
+        container_name: php-fpm_l5.8
         ports:
             - "8080:80"
         volumes:
@@ -17,6 +19,7 @@ services:
 
     mysql-app:
         image: mysql:5.7
+        container_name: mysql_l5.8
         ports:
             - "3306:3306"
         volumes:
