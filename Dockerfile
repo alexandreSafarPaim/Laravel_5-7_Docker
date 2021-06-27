@@ -4,8 +4,8 @@ FROM wyveo/nginx-php-fpm:php72
 # Non-Root User:
 #####################################
 # User Arg
-ARG PUID=1000
-ARG PGID=1000
+ARG PUID
+ARG PGID
 # Use user=larauser in docker-compose comands
 # If you want, create a alias to "docker-compose exec --user=larauser"
 RUN groupadd -g $PGID larauser && \
