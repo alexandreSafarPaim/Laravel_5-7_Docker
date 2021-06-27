@@ -7,7 +7,7 @@ services:
         networks:
             - app-network
 
-    laravel-app:
+    php-app:
         build: .
         container_name: php-fpm_l5.8
         ports:
